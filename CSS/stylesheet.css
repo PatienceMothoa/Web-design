@@ -1,0 +1,82 @@
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  text-align: center; 
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.aside {
+  background-color: lightgrey;
+  text-align: left;
+  margin: 0em;
+  padding: 2em;
+}
+
+.body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:110%;
+  background-color: lightgrey;
+  text-align: left;
+  padding: 2em;
+  margin:0em;
+}
+
+.image{
+  filter: grayscale(5%)
+}
+
+.main{
+  text-align: left;
+  background-color: lightgrey;
+}
+
+.header {
+  background-color: grey;
+}
+
+.footer {
+  background-color: grey;
+}
+
+img.rounded-corners {
+    border-radius: 50%;
+    border: lightgrey;
+    border-style: solid;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside   { order: 1; } 
+  .main    { order: 2; }
+  .footer  { order: 3; }
+}
+
+
+/*code for mobile devices smaller than 600px*/
+.body { background-color: mediumaquamarine; }
+ 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+   .body { background-color: lightgrey; }
+   .header {background-color: lightgray;}
+   .aside {background-color: grey;}
+   .footer {background-color: mediumaquamarine;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+   .body { background-color: whitesmoke; }
+   .main { background-color: lightgrey;}
+   .header {background-color: white;}
+   .aside {background-color: lightgrey;}
+   .footer {background-color: grey;}
+} 
